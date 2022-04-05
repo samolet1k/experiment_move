@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.sheep {
+			background-image: url(sheep.png);
+			width: 100px;
+			height: 130px;
+			background-size: 100%;
+			position: absolute;
+			left: 1700px;
+			top: 450px;
+			transition: 1.5s;
+		}
+		.pscheno {
+			background-image: url(1.png);
+			width: 150px;
+			height: 150px;
+			background-size: 100%;
+			position: absolute;
+			left: 200px;
+			top: 450px;
+			transition: 0.5s;
+		}
+	</style>
+</head>
+<body style="background-image: url(1.jpg);background-repeat: no-repeat;background-size: 100%;">
+	<div style="" class="pscheno"></div>
+	<div style="" class="sheep">
+	</div>
+<script type="text/javascript">
+	let sheep = document.querySelector(".sheep")
+	let seno = document.querySelector(".pscheno")
+	let posit = 1700;
+	let move = function() {
+		posit = posit - 100;
+		sheep.style.left = posit + "px"
+	}
+	let moveTop = function() {
+		seno.style.top = "100px"
+	}
+
+	setInterval(move,1000)
+	setTimeout(moveTop,2000)
+</script>
+</body>
+</html>
+
